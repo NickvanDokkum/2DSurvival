@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: bfb675937a4113d41909dc72f5922bab
+timeCreated: 1447072558
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - playerObject: {fileID: 149442, guid: 40d9374eae2170e41bcdc938ef5e616f, type: 2}
+  - tileObject: {fileID: 119670, guid: 3b9a4f70a99aeb34b8bafc35c6540f08, type: 2}
+  - wallObject: {fileID: 150308, guid: d18ec1796c5061149bbdfc8cd297a15e, type: 2}
+  - powerupObject: {fileID: 180088, guid: c63d783266a9164419ea8842960affc0, type: 2}
+  - enemySpawnpoint: {fileID: 130048, guid: 743ec50dcb2e0d34f9dc7c33dd57fa57, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
