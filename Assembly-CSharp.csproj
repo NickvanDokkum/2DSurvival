@@ -46,22 +46,20 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Creature\Movement.cs" />
-     <Compile Include="Assets\Scripts\Creature\Player\Attack.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\AttackNormal.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\FlameThrower.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\IAttack.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\PoisonShot.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\SpreadShot.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Controlls.cs" />
      <Compile Include="Assets\Scripts\Grid\GridSystem.cs" />
      <Compile Include="Assets\Scripts\Grid\GridVisualiser.cs" />
      <Compile Include="Assets\Scripts\Misc\Bullet.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
