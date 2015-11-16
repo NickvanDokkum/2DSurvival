@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpreadShot : MonoBehaviour, IAttack {
+public class SpreadShot : Upgrade, IAttack {
 
 	public double attackSpeed = 1;
 	bool attackReady = true;

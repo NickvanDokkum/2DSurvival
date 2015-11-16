@@ -45,16 +45,28 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Creature\Enemies\DamageOnTouch.cs" />
+     <Compile Include="Assets\Scripts\Creature\Health.cs" />
      <Compile Include="Assets\Scripts\Creature\Movement.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Attacks\AttackNormal.cs" />
-     <Compile Include="Assets\Scripts\Creature\Player\Attacks\FlameThrower.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\FlameThrower\FlameThrower.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\FlameThrower\FlamethrowerDamage.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Attacks\IAttack.cs" />
-     <Compile Include="Assets\Scripts\Creature\Player\Attacks\PoisonShot.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\Poison\Poison.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\Poison\PoisonShot.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Attacks\Poison\PoisonTarget.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Attacks\SpreadShot.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Controlls.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Defence\IDefence.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Defence\Regen.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Defence\Shield.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Defence\Speedup.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Upgrade.cs" />
      <Compile Include="Assets\Scripts\Grid\GridSystem.cs" />
      <Compile Include="Assets\Scripts\Grid\GridVisualiser.cs" />
-     <Compile Include="Assets\Scripts\Misc\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Misc\PickupRandomizer.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

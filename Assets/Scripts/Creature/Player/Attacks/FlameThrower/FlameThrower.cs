@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FlameThrower : MonoBehaviour, IAttack {
+public class FlameThrower : Upgrade, IAttack {
 
 	public double attackSpeed = 0.1;
+	public double rangedAttackSpeed = 2;
 	bool attackReady = true;
+	bool rangedReady = true;
 	public GameObject fire;
+	public GameObject ranged;
 	GameObject fireObject;
 
 	void Start(){
@@ -20,8 +23,20 @@ public class FlameThrower : MonoBehaviour, IAttack {
 			Invoke("ReadyAttack", (float)attackSpeed);
 			attackReady = false;
 		}
+		if (rangedReady) {
+			GameObject rangedObject = Instantiate(ranged);
+			rangedObject.transform.position = transform.position;
+			Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+			Vector3 dir = Input.mousePosition - pos;
+			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
+			rangedObject.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+			Invoke("RangedReady", (float)rangedAttackSpeed);
+			rangedReady = false;
+		}
 	}
-	
+	void RangedReady(){
+		rangedReady = true;
+	}
 	void Update(){
 		if (attackReady) {
 			fireObject.SetActive (false);

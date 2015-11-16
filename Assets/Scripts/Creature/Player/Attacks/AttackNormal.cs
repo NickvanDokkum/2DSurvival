@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AttackNormal : MonoBehaviour, IAttack {
+public class AttackNormal : Upgrade, IAttack {
 
 	public double attackSpeed = 0.6;
 	bool attackReady = true;
