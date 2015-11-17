@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AttackNormal : Upgrade, IAttack {
+public class AttackNormal : MonoBehaviour, IAttack {
 
 	public double attackSpeed = 0.6;
 	bool attackReady = true;
@@ -25,6 +25,7 @@ public class AttackNormal : Upgrade, IAttack {
 	void ReadyAttack(){
 		attackReady = true;
 	}
+	public void SetProjectile(GameObject projectile){}
 	public void Destroy(){
 		Destroy (this);
 	}

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Speedup : Upgrade, IDefence {
+public class Speedup : MonoBehaviour, IUpgrade, IDefence {
 
 	float speed = 0.1f;
 	Movement movement;

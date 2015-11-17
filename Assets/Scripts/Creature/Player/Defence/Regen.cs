@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Regen : Upgrade, IDefence {
+public class Regen : MonoBehaviour, IUpgrade, IDefence {
 
 	int regen = 1;
 	float time = 5;

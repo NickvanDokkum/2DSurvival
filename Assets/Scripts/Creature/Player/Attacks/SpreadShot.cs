@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpreadShot : Upgrade, IAttack {
+public class SpreadShot : MonoBehaviour, IUpgrade, IAttack {
 
 	public double attackSpeed = 1;
 	bool attackReady = true;
-	public GameObject bullet;
+	GameObject bullet;
 	
 	void Start(){
 		GetComponent<Controlls> ().SetIAttack (this);
@@ -26,6 +26,9 @@ public class SpreadShot : Upgrade, IAttack {
 	}
 	void ReadyAttack(){
 		attackReady = true;
+	}
+	public void SetProjectile(GameObject projectile){
+		bullet = projectile;
 	}
 	public void Destroy(){
 		Destroy (this);

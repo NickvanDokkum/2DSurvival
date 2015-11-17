@@ -1,20 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FlameThrower : Upgrade, IAttack {
+public class FlameThrower : MonoBehaviour, IUpgrade, IAttack {
 
 	public double attackSpeed = 0.1;
 	public double rangedAttackSpeed = 2;
 	bool attackReady = true;
 	bool rangedReady = true;
-	public GameObject fire;
-	public GameObject ranged;
+	GameObject ranged;
 	GameObject fireObject;
 
 	void Start(){
 		GetComponent<Controlls> ().SetIAttack (this);
-		fireObject = Instantiate (fire);
-		fireObject.SetActive (false);
 	}
 
 	public void StartAttack(){
@@ -51,6 +48,13 @@ public class FlameThrower : Upgrade, IAttack {
 	}
 	void ReadyAttack(){
 		attackReady = true;
+	}
+	public void SetProjectile(GameObject projectile){
+		ranged = projectile;
+	}
+	public void SetFire(GameObject firePrefab){
+		fireObject = Instantiate (firePrefab);
+		fireObject.SetActive (false);
 	}
 	public void Destroy(){
 		Destroy (fireObject);

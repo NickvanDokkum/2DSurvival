@@ -62,8 +62,9 @@
      <Compile Include="Assets\Scripts\Creature\Player\Defence\Regen.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Defence\Shield.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Defence\Speedup.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\IUpgrade.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\PlayerHealth.cs" />
-     <Compile Include="Assets\Scripts\Creature\Player\Upgrade.cs" />
+     <Compile Include="Assets\Scripts\Grid\GridPathfinding.cs" />
      <Compile Include="Assets\Scripts\Grid\GridSystem.cs" />
      <Compile Include="Assets\Scripts\Grid\GridVisualiser.cs" />
      <Compile Include="Assets\Scripts\Misc\PickupRandomizer.cs" />
