@@ -10,7 +10,7 @@ public class PickupRandomizer : MonoBehaviour {
 	int number;
 
 	void Awake() {
-		number = Random.Range(0, 3);
+		number = Random.Range(0, 6);
 		if (number >= 3) {
 			projectiles.Clear();
 		}
@@ -33,11 +33,15 @@ public class PickupRandomizer : MonoBehaviour {
 				flameThrower.SetFire(projectiles[3]);
 			} else if (number == 3) {
 				other.gameObject.AddComponent<Regen>();
+				Debug.Log(other.gameObject.GetComponent<Regen>());
 			} else if (number == 4) {
 				other.gameObject.AddComponent<Shield>();
+				Debug.Log(other.gameObject.GetComponent<Shield>());
 			} else if (number == 5) {
 				other.gameObject.AddComponent<Speedup>();
+				Debug.Log(other.gameObject.GetComponent<Speedup>());
 			}
+			Destroy(gameObject);
 		}
 	}
 }

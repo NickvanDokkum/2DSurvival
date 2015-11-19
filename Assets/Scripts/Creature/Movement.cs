@@ -4,8 +4,8 @@ using System.Collections;
 public class Movement : MonoBehaviour {
 
 	Vector2 currentSpeed;
-	public double speed;
-	public double direction;
+	public float speed;
+	public float direction;
 
 	public void ChangeSpeed(Vector2 speed){
 		currentSpeed = speed;
@@ -26,8 +26,7 @@ public class Movement : MonoBehaviour {
 			}
 		}
 	}
-
 	void Update(){
-		transform.Translate (currentSpeed * (float)speed / 15);
+		transform.Translate (currentSpeed * speed / 15);
 	}
 }

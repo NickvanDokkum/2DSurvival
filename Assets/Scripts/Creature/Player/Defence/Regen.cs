@@ -8,9 +8,9 @@ public class Regen : MonoBehaviour, IUpgrade, IDefence {
 	Health health;
 
 	void Start(){
+		GetComponent<IDefence> ().DestroyThis();
 		health = GetComponent<Health> ();
 		InvokeRepeating ("Heal", time, time);
-		GetComponent<IDefence> ().DestroyThis();
 	}
 	void Heal(){
 		health.Heal (regen);

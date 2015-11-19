@@ -20,7 +20,9 @@ public class Health : MonoBehaviour {
 		transform.position = new Vector2(transform.position.x + knockbackVec.x, transform.position.y + knockbackVec.y);
 	}
 	public void Damage(int damage){
-		health -= damage;
+		if ((damage - damageReduction) > 0) {
+			health -= (damage - damageReduction);
+		}
 		if (health <= 0) {
 			Death();
 		}

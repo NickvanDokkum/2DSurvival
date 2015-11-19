@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Creature\Player\Attacks\SpreadShot.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Controlls.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Defence\IDefence.cs" />
+     <Compile Include="Assets\Scripts\Creature\Player\Defence\NoDefence.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Defence\Regen.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Defence\Shield.cs" />
      <Compile Include="Assets\Scripts\Creature\Player\Defence\Speedup.cs" />
