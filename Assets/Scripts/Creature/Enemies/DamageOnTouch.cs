@@ -7,7 +7,7 @@ public class DamageOnTouch : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.tag == "Player") {
-			other.gameObject.GetComponent<Health>().DamageKnockback(damage, transform.position, 1.5f);
+			other.gameObject.GetComponent<Health>().DamageKnockback(damage, transform.position, 0);
 		}
 	}
 }

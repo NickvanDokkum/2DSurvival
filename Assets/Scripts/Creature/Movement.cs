@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour {
 			}
 		}
 	}
-	void Update(){
+	void FixedUpdate(){
 		transform.Translate (currentSpeed * speed / 15);
 	}
 }

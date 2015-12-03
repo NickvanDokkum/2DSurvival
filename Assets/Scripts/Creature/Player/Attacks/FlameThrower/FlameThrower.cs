@@ -12,6 +12,8 @@ public class FlameThrower : MonoBehaviour, IUpgrade, IAttack {
 
 	void Start(){
 		GetComponent<Controlls> ().SetIAttack (this);
+		fireObject.transform.position = transform.position;
+		fireObject.transform.SetParent (this.transform);
 	}
 
 	public void StartAttack(){
@@ -39,7 +41,6 @@ public class FlameThrower : MonoBehaviour, IUpgrade, IAttack {
 			fireObject.SetActive (false);
 		}
 		else {
-			fireObject.transform.position = transform.position;
 			Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
 			Vector3 dir = Input.mousePosition - pos;
 			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;

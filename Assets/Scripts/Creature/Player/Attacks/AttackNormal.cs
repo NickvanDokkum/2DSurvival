@@ -25,7 +25,9 @@ public class AttackNormal : MonoBehaviour, IAttack {
 	void ReadyAttack(){
 		attackReady = true;
 	}
-	public void SetProjectile(GameObject projectile){}
+	public void SetProjectile(GameObject projectile){
+		bullet = projectile;
+	}
 	public void Destroy(){
 		Destroy (this);
 	}

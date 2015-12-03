@@ -26,7 +26,6 @@ public class Health : MonoBehaviour {
 		if (health <= 0) {
 			Death();
 		}
-		Debug.Log (health);
 	}
 	public void Heal(int heal){
 		health += heal;
