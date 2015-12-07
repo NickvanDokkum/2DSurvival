@@ -18,7 +18,7 @@ public class MoveToPosition : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		if (targetPos != new Vector2 (0, 0)) {
+		if (targetPos != new Vector2 (9999999, 9999999)) {
 			Vector2 movementVector = targetPos - new Vector2 (transform.position.x, transform.position.y);
 			movementVector.Normalize ();
 			movementVector = (movementVector / 10) * speed;
@@ -28,7 +28,7 @@ public class MoveToPosition : MonoBehaviour {
 				if (movementVector.x > 0 && difference.x < movementVector.x) {
 					Done ();
 				}
-				else if (difference.x > movementVector.x) {
+				else if (movementVector.x < 0 && difference.x > movementVector.x) {
 					Done ();
 				}
 			}
@@ -36,18 +36,15 @@ public class MoveToPosition : MonoBehaviour {
 				if (movementVector.y > 0 && difference.y < movementVector.y) {
 					Done ();
 				}
-				else if (difference.y < movementVector.y) {
+				else if (movementVector.y < 0 && difference.y > movementVector.y) {
 					Done ();
 				}
 			}
 		}
-		else {
-			Done();
-		}
 	}
 	void Done(){
-		//movement.ChangeSpeed (new Vector2(0,0));
-		targetPos = new Vector2(0,0);
+		movement.ChangeSpeed (new Vector2(0,0));
+		targetPos = new Vector2(9999999,9999999);
 		Pathfinding.FindPath ();
 	}
 }

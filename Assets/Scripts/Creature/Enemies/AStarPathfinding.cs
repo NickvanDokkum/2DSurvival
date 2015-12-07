@@ -17,8 +17,15 @@ public class AStarPathfinding : MonoBehaviour {
 	}
 	public void FindPath(){
 		path.Clear ();
-		path = aStar.Path (transform);
-		//Debug.Log(transform.position + " " + path[0].worldPosition);
-		moveToPosition.StartWalking (new Vector2(path [0].worldPosition.x, path [0].worldPosition.y));
+		path = new List<Node> ();
+		path = aStar.Path (transform.position);
+		bool moving = false;
+		if (path.Count > 0) {
+			moveToPosition.StartWalking (new Vector2(path [0].worldPosition.x, path [0].worldPosition.y));
+			moving = true;
+		}
+		if(path.Count == 0 || moving == false) {
+			Invoke("FindPath", 0.5f);
+		}
 	}
 }

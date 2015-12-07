@@ -11,8 +11,8 @@ public class AStar : MonoBehaviour {
 		grid = GetComponent<Grid>();
 		target = GameObject.FindWithTag ("Player").transform;
 	}
-	public List<Node> Path(Transform seeker) {
-		FindPath(seeker.position,target.position);
+	public List<Node> Path(Vector3 seekerPos) {
+		FindPath(seekerPos,target.position);
 		return(path);
 	}
 	public List<Node> path = new List<Node>();
@@ -77,7 +77,7 @@ public class AStar : MonoBehaviour {
 		int dstX = Mathf.Abs(nodeA.gridX - nodeB.gridX);
 		int dstY = Mathf.Abs(nodeA.gridY - nodeB.gridY);
 		if (dstX != 0 && dstY != 0) {
-			return(999);
+			return(999999);
 		}
 		else {
 			if (dstX > dstY){

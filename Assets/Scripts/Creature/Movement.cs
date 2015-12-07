@@ -5,25 +5,34 @@ public class Movement : MonoBehaviour {
 
 	Vector2 currentSpeed;
 	public float speed;
-	public float direction;
+	public int direction;
 
-	public void ChangeSpeed(Vector2 speed){
-		currentSpeed = speed;
-		if (speed.y != 0) {
-			if (speed.y > 0) {
-				direction = 3;
-			}
-			else {
-				direction = 1;
-			}
+	public void ChangeSpeed(Vector2 speedVec){
+		currentSpeed = speedVec;
+		if (speedVec.x < 0) {
+			speedVec.x = -speedVec.x;
 		}
-		else if (speed.x != 0) {
-			if(speed.x > 0){
+		if (speedVec.y < 0) {
+			speedVec.y = -speedVec.y;
+		}
+		if (speedVec.y > speedVec.x) {
+			if (currentSpeed.y > 0) {
 				direction = 0;
 			}
 			else {
 				direction = 2;
 			}
+		}
+		else if (speedVec.y < speedVec.x) {
+			if (currentSpeed.x > 0) {
+				direction = 1;
+			}
+			else {
+				direction = 3;
+			}
+		}
+		else {
+			direction = 4;
 		}
 	}
 	void FixedUpdate(){
