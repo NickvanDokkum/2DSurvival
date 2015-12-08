@@ -15,7 +15,7 @@ public class AStar : MonoBehaviour {
 		FindPath(seekerPos,target.position);
 		return(path);
 	}
-	public List<Node> path = new List<Node>();
+	List<Node> path = new List<Node>();
 	
 	void FindPath(Vector3 startPos, Vector3 endPos) {
 		Node startNode = grid.NodeFromWorldPoint(startPos);
@@ -76,16 +76,11 @@ public class AStar : MonoBehaviour {
 	int GetDistance(Node nodeA, Node nodeB) {
 		int dstX = Mathf.Abs(nodeA.gridX - nodeB.gridX);
 		int dstY = Mathf.Abs(nodeA.gridY - nodeB.gridY);
-		if (dstX != 0 && dstY != 0) {
-			return(999999);
+		if (dstX > dstY){
+			return 14 * dstY + 10 * (dstX - dstY);
 		}
 		else {
-			if (dstX > dstY){
-				return 14 * dstY + 10 * (dstX - dstY);
-			}
-			else {
-				return 14 * dstX + 10 * (dstY - dstX);
-			}
+			return 14 * dstX + 10 * (dstY - dstX);
 		}
 	}
 }
